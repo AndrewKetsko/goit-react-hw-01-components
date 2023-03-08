@@ -1,6 +1,6 @@
 export default
 function Profile({ username, tag, location, avatar, stats }) {
-return (<div class="profile">
+return <><div class="profile">
     <div class="description">
         <img
             src={avatar}
@@ -25,5 +25,5 @@ return (<div class="profile">
             <span class="quantity">{stats.likes}</span>
         </li>
     </ul>
-</div>)
+</div></>
 };
