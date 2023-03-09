@@ -1,9 +1,19 @@
+import PropTypes from 'prop-types';
+import { Name, Avatar, Status, Item } from './FriendCard.styled';
+
 export default function FriendCard({ id, avatar, name, isOnline }) {
     return <>
-    <li key={id} class="item">
-            <span class="status">{ isOnline? 'online':'offline'}</span>
-  <img class="avatar" src={avatar} alt="User avatar" width="48" />
-            <p class="name">{ name }</p>
-</li>
+        <Item key={id}>
+            <Status>{ isOnline? 'online':'offline'}</Status>
+            <Avatar src={avatar} alt="User avatar" />
+            <Name>{ name }</Name>
+        </Item>
     </>
-}
+};
+
+FriendCard.propTypes = {
+    id: PropTypes.number.isRequired,
+    avatar: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    isOnline: PropTypes.bool.isRequired
+};
