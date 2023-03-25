@@ -14,13 +14,12 @@ export default function Transactions({ data }) {
 
         <tbody>
           {data.map(({id, type, amount, currency}, index)=>{
-            return <>
+            return (
               <tr key={id} style={{backgroundColor: index%2===0 ? 'lightgrey' : 'white' }}>
                 <td>{ type }</td>
                 <td>{ amount }</td>
                 <td>{ currency }</td>
-              </tr>
-            </>
+              </tr>)
           })}
         </tbody>
       </TransHistory>

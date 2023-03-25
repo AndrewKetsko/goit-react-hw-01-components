@@ -4,7 +4,7 @@ import { Name, Avatar, Status, Item } from './FriendCard.styled';
 export default function FriendCard({ id, avatar, name, isOnline }) {
     return <>
         <Item key={id}>
-            <Status style={{backgroundColor: isOnline ? 'green' : 'red' }}></Status>
+            <Status style={{backgroundColor: isOnline ? 'green' : 'red' }}/>
             <Avatar src={avatar} alt="User avatar" />
             <Name>{ name }</Name>
         </Item>

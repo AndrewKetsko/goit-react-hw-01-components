@@ -6,12 +6,13 @@ export default function FriendList({ friends }) {
     return <>
         <Friends>
             {friends.map(({id, avatar, name, isOnline}) => { 
-                return <>
-                    <FriendCard id={ id }
+                return (
+                    <FriendCard key={id}
+                        id={id}
                         avatar={ avatar }
                         name={ name }
-                        isOnline={ isOnline }/>
-                </>
+                        isOnline={ isOnline }/>)
+                
             })}
         </Friends>
     </>
