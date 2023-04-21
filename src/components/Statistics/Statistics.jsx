@@ -6,7 +6,7 @@ export default
 function Statistics({title, stats}) {
     return <>
         <StatisticsSection>
-            <Title>{title}</Title>
+            {title && <Title>{title}</Title>}
             <StatList>
                 {stats.map(({ id, label, percentage }) => (
                     <Item key={id} style={{backgroundColor: getRandomHexColor()}}> 
